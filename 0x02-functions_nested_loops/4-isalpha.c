@@ -9,41 +9,13 @@
 
 int _isalpha(int c)
 {
-	int CH;
-
-	if (c == 'o')
+	if ((c > 'a' && c <= 'z') || (c > 'A' && c <= 'Z'))
 	{
-		CH = 1;
-	} else if (c == 108)
-	{
-		CH = 1;
-	} else if (c == ';')
-	{
-		CH = 0;
-	} else if (c == 'C')
-	{
-		CH = 1;
-	} else if (c == 'i')
-	{
-		CH = 1;
-	} else if (c == 's')
-	{
-		CH = 1;
-	} else if (c == 'F')
-	{
-		CH = 1;
-	} else if (c == '9')
-	{
-		CH = 0;
-	} else if (c == 'M')
-	{
-		CH = 1;
-	} else if (c == '&')
-	{
-		CH = 0;
-	} else if (c == 'H')
-	{
-		CH = 1;
+		return (1);
 	}
-	return (CH);
+
+	else
+	{
+		return (0);
+	}
 }
