@@ -11,16 +11,23 @@
 int _islower(int c)
 {
 	int CH;
+	char i;
+	char j;
 
-	if (c == 'H')
-	{
-		CH = 0;
-	} else if (c == 'o')
-	{
+	do {
+		for (i = 'a'; i <= 'z'; i++)
+		{
+			CH = 1;
+		}
+	} while (c == i);
+	do {
+		for (j = 'A'; j <= 'Z'; j++)
+		{
+			CH = 0;
+		}
+	} while (c == j);
+	do {
 		CH = 1;
-	} else if (c == 108)
-	{
-		CH = 1;
-	}
+	} while (c);
 	return (CH);
 }
