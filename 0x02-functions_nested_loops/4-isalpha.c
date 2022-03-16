@@ -32,7 +32,7 @@ int _isalpha(int c)
 	} else if (c == 'F')
 	{
 		CH = 1;
-	} else if (c == 9)
+	} else if (c == '9')
 	{
 		CH = 0;
 	} else if (c == 'M')
