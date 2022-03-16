@@ -10,42 +10,13 @@
 
 int _islower(int c)
 {
-	int CH;
-
-	if (c == 108)
+	if (c > 'a' && c <= 'z')
 	{
-		CH = 1;
-	} else if (c == 'o')
-	{
-		CH = 1;
-	} else if (c == 'c')
-	{
-		CH = 1;
-	} else if (c == 'I')
-	{
-		CH = 0;
-	} else if  (c == 's')
-	{
-		CH = 1;
-	} else if (c == 70)
-	{
-		CH = 0;
-	} else if (c == 20)
-	{
-		CH = 0;
-	} else if (c == 'U')
-	{
-		CH = 0;
-	} else if (c == 'n')
-	{
-		CH = 1;
-	} else if (c == 0)
-	{
-		CH = 0;
-	} else if (c == 'H')
-	{
-		CH = 0;
+		return (1);
 	}
 
-	return (CH);
+	else
+	{
+		return (0);
+	}
 }
