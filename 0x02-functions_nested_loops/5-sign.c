@@ -18,7 +18,7 @@ int print_sign(int n)
 		CH = 1;
 	} else if (n == 0)
 	{
-		_putchar(0);
+		_putchar('0');
 		CH = 0;
 	} else if (n < 0)
 	{
