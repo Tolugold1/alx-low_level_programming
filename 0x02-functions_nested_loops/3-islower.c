@@ -18,7 +18,7 @@ int _islower(int c)
 	} else if (c == 'A' && c <= 'Z')
 	{
 		CH = 0;
-	} else if (c > 0)
+	} else if (c >= 0)
 	{
 		CH = 1;
 	}
