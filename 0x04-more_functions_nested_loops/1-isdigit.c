@@ -8,15 +8,13 @@
 
 int _isdigit(int c)
 {
-	int i;
 	int CH;
 
-	i = c % 10;
-	if (i >= 0 && i <= 9)
+	if (c >= '0' && c <= '9')
 	{
 		CH = 1;
 	}
-	else if ((i == 'a' && i <= 'z') && (i == 'A' && i <= 'Z'))
+	else
 	{
 		CH = 0;
 	}
