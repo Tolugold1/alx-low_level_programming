@@ -10,7 +10,7 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j, len, len_s;
-	char *k;
+	char *k = '\0';
 
 	len = 0;
 	len_s = 0;
