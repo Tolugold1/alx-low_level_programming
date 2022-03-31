@@ -3,6 +3,7 @@
 /**
  * _sqrt_recursion - Determine the natural square root of a number
  * @n: The number
+ * @i: The number to check
  * Return: The square root of n
  */
 
