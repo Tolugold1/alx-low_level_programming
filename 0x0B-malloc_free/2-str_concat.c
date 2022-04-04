@@ -17,12 +17,12 @@ char *str_concat(char *s1, char *s2)
 	len_s1 = _strlen(s1);
 	len_s2 = _strlen(s2);
 
-	if (len_s1 == NULL)
+	if (len_s1 == '\0')
 	{
 		s1 = "";
 	}
 
-	if (len_s2 == NULL)
+	if (len_s2 == '\0')
 	{
 		s2 = "";
 	}
