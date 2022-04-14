@@ -1,6 +1,11 @@
 #ifndef CALC_H
 #define CALC_H
 
+/**
+ * struct op - structure type
+ * Return: value.
+ */
+
 typedef struct op
 {
 	char *op;
