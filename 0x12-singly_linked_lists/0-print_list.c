@@ -10,12 +10,11 @@
 size_t print_list(const list_t *h)
 {
 	unsigned int i;
-	size_t result;
 
 	for (i = 0; h; i++)
 	{
 		printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
-		result++;
 	}
+	return (i);
 }
