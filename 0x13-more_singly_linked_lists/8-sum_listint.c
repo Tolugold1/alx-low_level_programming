@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sum_listint - function that returns the sum of all the data 
+ * sum_listint - function that returns the sum of all the data
  * @head: head pointer
  * Return: result.
  */
