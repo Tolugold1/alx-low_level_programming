@@ -19,6 +19,14 @@ int sum_listint(listint_t *head)
 	{
 		sum += head->n;
 		head = head->next;
+		if (head->next)
+		{
+			head = head->next;
+		}
+		else
+		{
+			break;
+		}
 	}
 	return (sum);
 }
