@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - function that inserts a new node at a given position.
+ * insert_nodeint_at_index - function that inserts a new
+ * node at a given position.
  * @head: head pointerr.
  * @idx: thhe index position to add the new node
  * @n: data for the new node.
@@ -51,7 +52,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 /**
  * listint_lenght - function to get the number of node in
  * the list
- * @c: pointer pointing to the node head
+ * @h: pointer pointing to the node head
  * Return: number of nodes
  */
 
