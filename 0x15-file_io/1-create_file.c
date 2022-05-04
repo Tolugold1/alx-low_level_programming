@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	len = strlen(text_content);
-	len1 = write(STDOUT_FILENO, text_content, len);
+	len1 = write(fd, text_content, len);
 
 	close(fd);
 	if (len1 != len)
