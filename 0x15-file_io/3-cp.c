@@ -15,52 +15,86 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+		argtestErr();
 	}
-
 	fdFileFrom = open(argv[1], O_RDONLY);
 	if (fdFileFrom == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		fdFileFromErr(argv[1]);
 	}
-
 	fdFileTo = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fdFileTo == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		fdFileToErr(argv[2]);
 	}
-
 	while ((len = read(fdFileFrom, buf, 1024)) > 0)
 	{
 		if (write(fdFileTo, buf, len) != len)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
+			fdFileToErr(argv[2]);
 		}
 	}
-
 	if (len == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit (98);
+		fdFileFromErr(argv[1]);
 	}
-
 	c_close = close(fdFileFrom);
 	if (c_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFileFrom);
-		exit(100);
+		closeErr(fdFileFrom);
 	}
-
 	c_close = close(fdFileTo);
 	if (c_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFileFrom);
-		exit(100);
+		closeErr(fdFileTo);
 	}
-
 	return (0);
+}
+
+/**
+ * argtestErr - error function for file_from
+ *
+ * Return: exit 97.
+ */
+
+int argtestErr(void)
+{
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
+}
+
+/**
+ * fdFileFromErr - error function for file_from
+ * @s: argv[1] string.
+ * Return: exit 98.
+ */
+
+int fdFileFromErr(char *s)
+{
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
+	exit(98);
+}
+
+/**
+ * fdFileToErr - error function for file_to
+ * @s: argv[2] string.
+ * Return: exit 99.
+ */
+
+int fdFileToErr(char *s)
+{
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", s);
+	exit(99);
+}
+
+/**
+ * closeErr - error function for close syscall
+ * @i: FD_VALUE
+ * Return: exit 100.
+ */
+
+int closeErr(int i)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFileFrom);
+	exit(100);
 }
