@@ -95,6 +95,6 @@ void fdFileToErr(char *s)
 
 void closeErr(int i)
 {
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFileFrom);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
 	exit(100);
 }
