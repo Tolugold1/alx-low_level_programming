@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
  * Return: exit 97.
  */
 
-int argtestErr(void)
+void argtestErr(void)
 {
 	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
@@ -69,7 +69,7 @@ int argtestErr(void)
  * Return: exit 98.
  */
 
-int fdFileFromErr(char *s)
+void fdFileFromErr(char *s)
 {
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
 	exit(98);
@@ -81,7 +81,7 @@ int fdFileFromErr(char *s)
  * Return: exit 99.
  */
 
-int fdFileToErr(char *s)
+void fdFileToErr(char *s)
 {
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", s);
 	exit(99);
@@ -93,7 +93,7 @@ int fdFileToErr(char *s)
  * Return: exit 100.
  */
 
-int closeErr(int i)
+void closeErr(int i)
 {
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFileFrom);
 	exit(100);

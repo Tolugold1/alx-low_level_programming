@@ -10,9 +10,9 @@
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
-int argtestErr(void);
-int fdFileFromErr(char *s);
-int fdFileToErr(char *s);
-int closeErr(int i);
+void argtestErr(void);
+void fdFileFromErr(char *s);
+void fdFileToErr(char *s);
+void closeErr(int i);
 
 #endif
