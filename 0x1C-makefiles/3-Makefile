@@ -6,7 +6,7 @@ RM = rm
 
 .PHONY: all
 all: $(OBJ)
-	$(CC) $< -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
   
 .PHONY: clean
 clean: *~ $(NAME)
