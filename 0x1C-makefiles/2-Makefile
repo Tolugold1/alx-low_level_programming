@@ -1,0 +1,10 @@
+CC=gcc
+SRC = 
+OBJ = 
+NAME = school
+
+all: 
+     -o school
+
+%.o: %.c
+    -c -o  $<

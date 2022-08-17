@@ -1,0 +1,5 @@
+CC=gcc
+SRC = main.o school.o
+
+all: 
+  -o school
