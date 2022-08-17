@@ -21,4 +21,6 @@ fclean: clean oclean
 
 .PHONY: re
 re: oclean all
-  
+
+%.o: %.c
+	$(CC) -c -o $@ $<
