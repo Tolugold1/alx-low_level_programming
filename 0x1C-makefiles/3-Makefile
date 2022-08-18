@@ -11,11 +11,11 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
   
 .PHONY: clean
-clean: *~ $(NAME)
+clean:
 	$(RM) -f *~ $(NAME)
 
 .PHONY: oclean
-oclean: $(OBJ)
+oclean:
 	$(RM) -f $(OBJ)
 
 .PHONY: fclean
