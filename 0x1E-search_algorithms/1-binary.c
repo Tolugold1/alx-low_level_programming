@@ -13,6 +13,7 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t low, high, middle_number;
+
 	low = 0;
 	high = size - 2;
 
